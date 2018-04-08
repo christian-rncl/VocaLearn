@@ -33,6 +33,7 @@ export default class Quiz extends React.Component{
     this.state = {
       questions : quizzes[id].questions,
       answers : quizzes[id].answers,
+      lang : quizzes[id].language,
       currentQuestion : 1
     }
   }
