@@ -1,5 +1,5 @@
 import React from 'react';
-import $ from 'jquery'; 
+import $ from 'jquery';
 
 function isWhiteSpace(char) {
     return " \t\n".includes(char);
@@ -39,9 +39,8 @@ export default class QuizQuestion extends React.Component{
 
 
 
-  testSpeech(question, answer, lang) {
-      
-      console.log("TESTING" + lang);
+  testSpeech(question, answer) {
+
       var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       var SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
       var SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
@@ -60,7 +59,16 @@ export default class QuizQuestion extends React.Component{
     // TODO SWITCH BACK TO JAP
     // var phrase = answers[idx];
     var phrase = question;
-    console.log(question);
+    var lang = 'ja-JP';
+    console.log(phrase.charAt(0));
+
+    if(phrase.charAt(0) == 'G')
+    {
+        lang = 'fil-PH';
+    } else  if (phrase.charAt(0) == ' '){
+        lang = 'ar-SA';
+    }
+
     phrasePara.textContent = '';
     resultPara.textContent = 'Right or wrong?';
     resultPara.style.background = 'rgba(0,0,0,0.2)';
@@ -68,7 +76,7 @@ export default class QuizQuestion extends React.Component{
 
     var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + phrase_en +';';
     var recognition = new SpeechRecognition();
-    recognition.lang = 'ja-JP';
+    recognition.lang = lang;
     var speechRecognitionList = new SpeechGrammarList();
     speechRecognitionList.addFromString(grammar, 1);
     recognition.grammars = speechRecognitionList;
@@ -89,6 +97,7 @@ export default class QuizQuestion extends React.Component{
       var speechResult = event.results[0][0].transcript;
       diagnosticPara.textContent = 'Speech Received: ' + speechResult + '.';
       correctAnswer.textContent = 'Correct Answer : ' + phrase + '.';
+
 
 
       // console.log(speechResult === phrase);
@@ -178,7 +187,7 @@ export default class QuizQuestion extends React.Component{
             </div>
             <div className="row-sm-4">
               <div className="A">
-                <button id="buttontest" onClick={this.testSpeech.bind(question, answer, lang)}>Start new test</button>
+                <button id="buttontest" onClick={this.testSpeech.bind(question, answer)}>Start new test</button>
                 <div>
                 	<p id="phrase"></p>
                 	<p id="result">Right or wrong?</p>
