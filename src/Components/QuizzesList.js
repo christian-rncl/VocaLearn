@@ -26,7 +26,7 @@ export default class QuizzesList extends React.Component{
           </div>
           <div className="row-sm-3">
             <Link to='/quiz/0'>
-              <button className="btn btn-lg btn-primary language-buttons">English Quiz</button>
+              <button className="btn btn-lg btn-primary language-buttons">Tagalog Quiz</button>
             </Link>
           </div>
         </div>
