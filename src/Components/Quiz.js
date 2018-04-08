@@ -29,6 +29,7 @@ export default class Quiz extends React.Component{
     ];
     var id = props.params.id;
     console.log(id);
+    console.log(quizzes[id].language);
 
     this.state = {
       questions : quizzes[id].questions,
@@ -52,6 +53,9 @@ export default class Quiz extends React.Component{
     var currentQuestion = state.currentQuestion;
     var questions = state.questions;
     var answers = state.answers;
+    var lang_set = state.lang;
+
+    console.log("lang-set: " + lang_set);
 
     return(
       <div className='quiz-container'>
@@ -60,7 +64,7 @@ export default class Quiz extends React.Component{
             <QuizSidebar questions={questions} currentQuestion={currentQuestion} changeQuestion={this.getChangeQF.bind(this)} />
           </div>
           <div className="col-sm-10 question-wrapper">
-            <QuizQuestion question={questions[currentQuestion - 1]} answer={answers[currentQuestion - 1]} num={currentQuestion} />
+            <QuizQuestion question={questions[currentQuestion - 1]} answer={answers[currentQuestion - 1]} num={currentQuestion} lang={lang_set}/>
           </div>
         </div>
       </div>

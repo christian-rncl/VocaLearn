@@ -39,6 +39,7 @@ export default class QuizQuestion extends React.Component{
 
 
   testSpeech(question, answer, lang) {
+      
       console.log("TESTING" + lang);
       var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       var SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
@@ -155,6 +156,7 @@ export default class QuizQuestion extends React.Component{
     var props = this.props;
     var question = props.question;
     var answer = props.answer;
+    var lang = props.lang;
     var num = props.num;
 
     return(
