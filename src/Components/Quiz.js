@@ -15,8 +15,9 @@ export default class Quiz extends React.Component{
         language : 'fil-PH'
     },
     {
-        questions : ["What is \"Thank You\" in Japanese?", "How do you say \"I am very sorry\" in Japanese?"],
-        answers : ["ありがとうございます", "申し訳ございません"],
+        questions : ["What is \"Thank You\" in Japanese?", "How do you say \"I am very sorry\" in Japanese?",
+        "How do you say \"What time is it?\" in Japanese?"],
+        answers : ["ありがとうございます", "申し訳ございません", "今何時ですか"],
         language : 'ja-JP'
     },
     {
