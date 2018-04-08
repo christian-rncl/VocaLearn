@@ -9,14 +9,20 @@ export default class Quiz extends React.Component{
     super(props);
     var quizzes = [
     {
-        questions : ["", "What is Thank You in French?"],
-        answers : [ "bonjour", "merci"],
-        language : 'en-US'
+        questions : ["Gusto kong maglaro", "maganda ka", "matulog tayo"],
+        answers : [ "I want to play", "you're beautiful", "let's sleep"],
+        language : 'fil-PH'
     },
     {
         questions : ["What is \"Thank You\" in Japanese?", "How do you say \"I am very sorry\" in Japanese?"],
         answers : ["ありがとうございます", "申し訳ございません"],
-        language : 'en-US'
+        language : 'ja-JP'
+    },
+    {
+        questions : ["What is \"The boy ate the fruit\" in Arabic?", "How do you say \"I am very sorry\" in Japanese?"],
+        answers : [" اكل الولد الفاكهه" , "申し訳ございません"],
+        language : 'ar-SA'
+
     }
     ];
     var id = props.params.id;

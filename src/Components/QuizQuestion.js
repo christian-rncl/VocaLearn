@@ -64,7 +64,7 @@ export default class QuizQuestion extends React.Component{
 
     var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + phrase_en +';';
     var recognition = new SpeechRecognition();
-    recognition.lang = "en-US";
+    recognition.lang = "ar-SA";
     var speechRecognitionList = new SpeechGrammarList();
     speechRecognitionList.addFromString(grammar, 1);
     recognition.grammars = speechRecognitionList;
