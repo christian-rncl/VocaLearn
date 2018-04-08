@@ -68,7 +68,7 @@ export default class QuizQuestion extends React.Component{
 
     var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + phrase_en +';';
     var recognition = new SpeechRecognition();
-    recognition.lang = lang;
+    recognition.lang = 'ja-JP';
     var speechRecognitionList = new SpeechGrammarList();
     speechRecognitionList.addFromString(grammar, 1);
     recognition.grammars = speechRecognitionList;
@@ -87,7 +87,7 @@ export default class QuizQuestion extends React.Component{
       // The second [0] returns the SpeechRecognitionAlternative at position 0.
       // We then return the transcript property of the SpeechRecognitionAlternative object
       var speechResult = event.results[0][0].transcript;
-      diagnosticPara.textContent = 'Speech received: ' + speechResult + '.';
+      diagnosticPara.textContent = 'Speech Received: ' + speechResult + '.';
       correctAnswer.textContent = 'Correct Answer : ' + phrase + '.';
 
 
@@ -173,12 +173,12 @@ export default class QuizQuestion extends React.Component{
         <div className="col">
           <div className="row-sm-8">
             <div className="Q">
-              <h1>Question: {props.num}</h1>
-              <h2>{props.question}</h2>
+              <h1>Question: {num}</h1>
+              <h2>{question}</h2>
             </div>
             <div className="row-sm-4">
               <div className="A">
-                <button id="buttontest" onClick={this.testSpeech.bind(props.question, props.answer, props.lang)}>Start new test</button>
+                <button id="buttontest" onClick={this.testSpeech.bind(question, answer, lang)}>Start new test</button>
                 <div>
                 	<p id="phrase"></p>
                 	<p id="result">Right or wrong?</p>
