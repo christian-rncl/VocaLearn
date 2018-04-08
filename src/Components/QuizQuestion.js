@@ -27,13 +27,7 @@ export default class QuizQuestion extends React.Component{
           <h1>Answer : {this.props.answer}</h1>
         </div>
         <div></div>
-        <div className="question-container">
-          <div className="col">
-            <div className="row-sm-8">
-              <div className="Q">
-                <h1>Question: {this.state.num}</h1>
-                <h2>{this.state.question}</h2>
-              </div>
+
       <div className="question-container">
         <div className="col">
           <div className="row-sm-8">
