@@ -22,8 +22,8 @@ export default class Quiz extends React.Component{
     },
 
     {
-        questions : ["What is \"He went to the mosque\" in Arabic?", "How do you say \"I am very sorry\" in Japanese?"],
-        answers : [" ذهب الى المسجد" , "申し訳ございません"],
+        questions : ["What is \"He went to the mosque\"?", "How do you say \"I rode in the red car\"?", "This place is crowded"],
+        answers : [" ذهب الى المسجد" , "ركبت في السيارة الحمراء", "المحل مزدحم"],
         language : 'ar-SA'
     },
     ];

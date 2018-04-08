@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery'; 
 
 function isWhiteSpace(char) {
     return " \t\n".includes(char);
@@ -48,6 +49,7 @@ export default class QuizQuestion extends React.Component{
       var phrasePara = document.querySelector('#phrase');
       var resultPara = document.querySelector('#result');
       var diagnosticPara = document.querySelector('#output');
+      var correctAnswer = document.querySelector('#correct');
 
       var testBtn = document.getElementById('buttontest');
 
@@ -86,6 +88,8 @@ export default class QuizQuestion extends React.Component{
       // We then return the transcript property of the SpeechRecognitionAlternative object
       var speechResult = event.results[0][0].transcript;
       diagnosticPara.textContent = 'Speech received: ' + speechResult + '.';
+      correctAnswer.textContent = 'Correct Answer : ' + phrase + '.';
+
 
       // console.log(speechResult === phrase);
       if(compare_strings(speechResult, phrase)) {
@@ -159,6 +163,8 @@ export default class QuizQuestion extends React.Component{
     var lang = props.lang;
     var num = props.num;
 
+    $('#result').css('background', 'rgba(0,0,0,0.2)');
+
     return(
       <div className="question-container">
         <div className="col">
@@ -169,12 +175,12 @@ export default class QuizQuestion extends React.Component{
             </div>
             <div className="row-sm-4">
               <div className="A">
-                <h3>Correct Answer : <span id ="answer">{props.answer}</span></h3>
                 <button id="buttontest" onClick={this.testSpeech.bind(props.question, props.answer, props.lang)}>Start new test</button>
                 <div>
                 	<p id="phrase"></p>
                 	<p id="result">Right or wrong?</p>
                 	<p id="output"></p>
+                  <p id="correct"></p>
                 </div>
               </div>
             </div>
