@@ -161,6 +161,8 @@ export default class QuizQuestion extends React.Component{
     var answer = props.answer;
     var num = props.num;
 
+    $('#result').css('background', 'rgba(0,0,0,0.2)');
+
     return(
       <div className="question-container">
         <div className="col">
