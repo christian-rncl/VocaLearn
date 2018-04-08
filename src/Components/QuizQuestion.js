@@ -162,6 +162,9 @@ export default class QuizQuestion extends React.Component{
     var num = props.num;
 
     $('#result').css('background', 'rgba(0,0,0,0.2)');
+    $('#result').text("Right or wrong?");
+    $('#correct').text("");
+    $('#output').text("");
 
     return(
       <div className="question-container">
