@@ -6,3 +6,8 @@ html, body, #root, #root>div {
 	height: 40%;
 	width: 40%;
 }
+
+#home_box, #home_box>div {
+	height: 100%;
+	width: 100%;
+}
