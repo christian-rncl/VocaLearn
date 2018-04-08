@@ -14,21 +14,22 @@ export default class QuizzesList extends React.Component{
               <button className="btn btn-lg btn-primary language-buttons">Japanese Quiz</button>
             </Link>
           </div>
+          <div className="row-sm-4">
+            <Link to='/quiz/1'>
+              <button className="btn btn-lg btn-primary language-buttons">Tagalog Quiz</button>
+            </Link>
+          </div>
           <div className="row-sm-3">
-            <Link to='/quiz/0'>
+            <Link to='/quiz/2'>
               <button className="btn btn-lg btn-primary language-buttons">Arabic Quiz</button>
             </Link>
           </div>
           <div className="row-sm-3">
-            <Link to='/quiz/0'>
+            <Link to='/quiz/2'>
               <button className="btn btn-lg btn-primary language-buttons">Hindi Quiz</button>
             </Link>
           </div>
-          <div className="row-sm-3">
-            <Link to='/quiz/0'>
-              <button className="btn btn-lg btn-primary language-buttons">Tagalog Quiz</button>
-            </Link>
-          </div>
+
         </div>
       </div>
     );
