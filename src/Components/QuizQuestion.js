@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery'; 
 
 function isWhiteSpace(char) {
     return " \t\n".includes(char);
