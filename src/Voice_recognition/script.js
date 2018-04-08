@@ -3,16 +3,11 @@ var SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarLi
 var SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
 const comparisons = require('./test_speech_comparison.js');
 
-var phrasePara = document.querySelector('.phrase');
-var resultPara = document.querySelector('.result');
-var diagnosticPara = document.querySelector('.output');
+var phrasePara = document.getElementById('phrase');
+var resultPara = document.getElementById('result');
+var diagnosticPara = document.getElementById('output');
+var testBtn = document.getElementById('buttontest');
 
-var testBtn = document.querySelector('button');
-/**
- *  Updates textcontents of clases s "phrase" "result" "output"
- *  with comparisons of @param question and @param answer.
- * given a language code string @param lang
- */
 function testSpeech(question, answer,) {
   testBtn.disabled = true;
   testBtn.textContent = 'Test in progress';
@@ -49,6 +44,42 @@ function testSpeech(question, answer,) {
     // We then return the transcript property of the SpeechRecognitionAlternative object
     var speechResult = event.results[0][0].transcript;
     diagnosticPara.textContent = 'Speech received: ' + speechResult + '.';
+
+
+    /**
+     * Recognized text comparison
+     * Author: Christian Roncal
+     **/
+
+    /* return true if char is space */
+    function isWhiteSpace(char) {
+        return " \t\n".includes(char);
+    }
+
+    /* return true if char is punctuation */
+    function isPunct(char) {
+        return ";:.,?!-'\"(){}".includes(char);
+    }
+
+    /* strip punctuation and spaces from @param string */
+    function compress(string) {
+        return string
+          .split("")
+          .filter(char => !isWhiteSpace(char) && !isPunct(char))
+          .join("");
+    }
+
+    /* checks if result, phrase are the same */
+    function compare_strings(result, phrase)
+    {
+        var result_punctuationless = compress(result).toUpperCase();
+        var phrase_punctuationless = compress(phrase).toUpperCase();
+
+          console.log("result punctuationless: " + result_punctuationless);
+          console.log("phrase punctuationless: " + phrase_punctuationless);
+          return (result_punctuationless === phrase_punctuationless);
+    }
+
 
     // console.log(speechResult === phrase);
     if(comparisons.compare_strings(speechResult, phrase)) {

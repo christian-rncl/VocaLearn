@@ -3,7 +3,6 @@ import QuizSidebar from './QuizSidebar.js';
 import QuizQuestion from './QuizQuestion.js';
 
 import '../Stylesheets/Quiz.css';
-//import '../Voice_recognition/test_speech';
 
 export default class Quiz extends React.Component{
   constructor(props){
