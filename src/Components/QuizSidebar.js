@@ -21,10 +21,10 @@ export default class QuizSidebar extends React.Component{
       </a>
     </div>
  )
-    for(var i = 1; i < state.questions.length + 1; i++){
+    for(var i = 0; i < state.questions.length; i++){
       q.push(
         <div className="row-lg-3">
-          <button className="btn btn-lg btn-primary question-boxes" onClick={state.changeQuestion(i)}>Problem {i}</button>
+          <button className="btn btn-lg btn-primary question-boxes" onClick={state.changeQuestion(i)}>Problem {i + 1}</button>
         </div>
       );
     }
