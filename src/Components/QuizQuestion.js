@@ -33,11 +33,6 @@ export default class QuizQuestion extends React.Component{
 
   constructor(props){
     super(props);
-    this.state = {
-      question: props.question,
-      answer: props.answer,
-      num: props.num
-    }
     this.testSpeech.bind(this);
   }
 
@@ -156,24 +151,24 @@ export default class QuizQuestion extends React.Component{
 
   render(){
 
-    var state = this.state;
-    var question = state.question;
-    var answer = state.answer;
-    var num = state.num;
+    var props = this.props;
+    var question = props.question;
+    var answer = props.answer;
+    var num = props.num;
 
     return(
       <div className="question-container">
         <div className="col">
           <div className="row-sm-8">
             <div className="Q">
-              <h1>Question: {this.state.num}</h1>
-              <h2>{this.state.question}</h2>
+              <h1>Question: {props.num}</h1>
+              <h2>{props.question}</h2>
             </div>
             <div className="row-sm-4">
               <div className="A">
                 <h3>Your Answer: [user answer here]</h3>
-                <h3>Correct Answer : <span id ="answer">{this.state.answer}</span></h3>
-                <button id="buttontest" onClick={this.testSpeech.bind(this.state.question, this.state.answer)}>Start new test</button>
+                <h3>Correct Answer : <span id ="answer">{props.answer}</span></h3>
+                <button id="buttontest" onClick={this.testSpeech.bind(props.question, props.answer)}>Start new test</button>
                 <div>
                 	<p id="phrase">Phrase ...</p>
                 	<p id="result">Right or wrong?</p>
