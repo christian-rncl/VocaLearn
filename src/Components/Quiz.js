@@ -9,17 +9,18 @@ export default class Quiz extends React.Component{
     super(props);
     var quizzes = [
     {
-        questions : ["How do you say \"I want to play\"", "How do you say \"You're beautiful\"",
-        "How do you say \"Let's sleep\""],
-        answers : [ "Gusto kong maglaro", "maganda ka", "matulog tayo"],
-        language : 'fil-PH'
-    },
-    {
         questions : ["What is \"Thank You\" in Japanese?", "How do you say \"I am very sorry\" in Japanese?",
         "How do you say \"What time is it?\" in Japanese?"],
         answers : ["ありがとうございます", "申し訳ございません", "今何時ですか"],
         language : 'ja-JP'
     },
+    {
+        questions : ["How do you say \"I want to play\"", "How do you say \"You're beautiful\"",
+        "How do you say \"Let's sleep\""],
+        answers : [ "Gusto kong maglaro", "maganda ka", "matulog tayo"],
+        language : 'fil-PH'
+    },
+
     {
         questions : ["What is \"He went to the mosque\" in Arabic?", "How do you say \"I am very sorry\" in Japanese?"],
         answers : [" ذهب الى المسجد" , "申し訳ございません"],
