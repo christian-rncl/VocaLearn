@@ -8,10 +8,16 @@ export default class Quiz extends React.Component{
   constructor(props){
     super(props);
     var quizzes = [
-      {
-        questions : ["What is Good Morning in French?", "What is Thank You in French?"],
-        answers : [ "bonjour", "merci"]
-      }
+    {
+        questions : ["", "What is Thank You in French?"],
+        answers : [ "bonjour", "merci"],
+        language : 'en-US'
+    },
+    {
+        questions : ["What is \"Thank You\" in Japanese?", "How do you say \"I am very sorry\" in Japanese?"],
+        answers : ["ありがとうございます", "申し訳ございません"],
+        language : 'en-US'
+    }
     ];
     var id = props.params.id;
     console.log(id);
