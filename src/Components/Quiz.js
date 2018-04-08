@@ -9,8 +9,9 @@ export default class Quiz extends React.Component{
     super(props);
     var quizzes = [
     {
-        questions : ["Gusto kong maglaro", "maganda ka", "matulog tayo"],
-        answers : [ "I want to play", "you're beautiful", "let's sleep"],
+        questions : ["How do you say \"I want to play\"", "How do you say \"You're beautiful\"",
+        "How do you say \"Let's sleep\""],
+        answers : [ "Gusto kong maglaro", "maganda ka", "matulog tayo"],
         language : 'fil-PH'
     },
     {
@@ -19,11 +20,10 @@ export default class Quiz extends React.Component{
         language : 'ja-JP'
     },
     {
-        questions : ["What is \"The boy ate the fruit\" in Arabic?", "How do you say \"I am very sorry\" in Japanese?"],
-        answers : [" اكل الولد الفاكهه" , "申し訳ございません"],
+        questions : ["What is \"He went to the mosque\" in Arabic?", "How do you say \"I am very sorry\" in Japanese?"],
+        answers : [" ذهب الى المسجد" , "申し訳ございません"],
         language : 'ar-SA'
-
-    }
+    },
     ];
     var id = props.params.id;
     console.log(id);
