@@ -38,7 +38,8 @@ export default class QuizQuestion extends React.Component{
 
 
 
-  testSpeech(question, answer) {
+  testSpeech(question, answer, lang) {
+      console.log("TESTING" + lang);
       var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       var SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
       var SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
@@ -64,7 +65,7 @@ export default class QuizQuestion extends React.Component{
 
     var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + phrase_en +';';
     var recognition = new SpeechRecognition();
-    recognition.lang = "ja-JP";
+    recognition.lang = lang;
     var speechRecognitionList = new SpeechGrammarList();
     speechRecognitionList.addFromString(grammar, 1);
     recognition.grammars = speechRecognitionList;
@@ -167,7 +168,7 @@ export default class QuizQuestion extends React.Component{
             <div className="row-sm-4">
               <div className="A">
                 <h3>Correct Answer : <span id ="answer">{props.answer}</span></h3>
-                <button id="buttontest" onClick={this.testSpeech.bind(props.question, props.answer)}>Start new test</button>
+                <button id="buttontest" onClick={this.testSpeech.bind(props.question, props.answer, props.lang)}>Start new test</button>
                 <div>
                 	<p id="phrase"></p>
                 	<p id="result">Right or wrong?</p>
