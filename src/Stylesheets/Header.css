@@ -1,0 +1,47 @@
+.Header{
+  position: sticky;
+  left: 0;
+  top: 0;
+  background: rgb(205, 205, 205);
+  width: 100%;
+  display: run-in;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+.Link{
+  display: inline-block;
+  background-color: rgb(205, 205, 205);
+  border: none;
+  color: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin-right: 20px;
+  margin-left: 40px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-family: Montserrat;
+  color: olive;
+  width: 200px;
+  box-shadow: 0 0 21px 0px rgba(0,0,0,0.3);
+}
+
+.Link:hover{
+  background-color: white;
+  color: olive;
+}
+
+#title{
+  color: white;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  font-family: Montserrat;
+  font-weight: 1000;
+  font-size: 50px;
+}

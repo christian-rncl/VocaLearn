@@ -1,0 +1,42 @@
+.question-boxes{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:85%;
+    padding:10px;
+}
+
+#answer{
+    display: none;
+}
+
+.sidebar-wrapper{
+    background-color: rgb(94, 80, 80);
+
+}
+
+.quiz-container{
+    height: 100%;
+}
+
+.row-container{
+    height:100%;
+
+}
+.question-wrapper{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    align-content: center;
+    
+    
+}
+.question-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    align-content: center;
+}

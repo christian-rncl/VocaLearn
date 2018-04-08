@@ -1,0 +1,8 @@
+html, body, #root, #root>div {
+    height: 100%
+}
+
+#banner, #banner>div {
+	height: 40%;
+	width: 40%;
+}
