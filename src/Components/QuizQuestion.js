@@ -61,11 +61,14 @@ export default class QuizQuestion extends React.Component{
     var phrase = question;
     var lang = 'ja-JP';
     console.log(phrase.charAt(0));
+    console.log("the phrase is \"" + phrase + "\"");
 
-    if(phrase.charAt(0) == 'G' || 'M')
+    if(phrase.charAt(0) == 'G' || phrase.charAt(0) == 'M')
     {
+        console.log("I'm in here");
         lang = 'fil-PH';
     } else  if (phrase.charAt(0) == ' '){
+        console.log("I'm in here too");
         lang = 'ar-SA';
     }
 
