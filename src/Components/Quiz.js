@@ -20,11 +20,16 @@ export default class Quiz extends React.Component{
         answers : [ "Gusto kong maglaro", "Maganda ka", "Matulog tayo"],
         language : 'fil-PH'
     },
-
     {
         questions : ["What is \"He went to the mosque\"?", "How do you say \"I rode in the red car\"?", "This place is crowded"],
         answers : [" ذهب الى المسجد" , " ركبت في السيارة الحمراء", " المحل مزدحم"],
         language : 'ar-SA'
+    },
+    {
+        questions : ["How do you say \"I want to go home\" in Korean?", "How do you say \"I have so much homework\" in Korean?",
+        "How do you say \"I want to die\" in Korean?"],
+        answers : [ "집에 가고 싶어", "숙제가 많이 있어", "나는 죽고 싶어"],
+        language : 'ko-KA'
     },
     ];
     var id = props.params.id;
