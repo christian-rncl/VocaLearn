@@ -17,7 +17,7 @@ export default class QuizSidebar extends React.Component{
     var state = this.state;
     q.push(<div className="row-lg-3">
       <a href="index.html">
-        <img id ="home_box" src="./images/VocaLearn_Logo.png"></img>
+        <img id ="home_box" src="./images/VocaLearn_Logo.png" alt="Website Logo"></img>
       </a>
     </div>
  )
