@@ -23,7 +23,7 @@ export default class Quiz extends React.Component{
 
     {
         questions : ["What is \"He went to the mosque\"?", "How do you say \"I rode in the red car\"?", "This place is crowded"],
-        answers : [" ذهب الى المسجد" , " ركبت في السيارة الحمراء", " المحل مزدحم"],
+        answers : [" ذهب الى المسجد" , " ركبت في السياره الحمراء", " هذا المحل مزدحم"],
         language : 'ar-SA'
     },
     ];
