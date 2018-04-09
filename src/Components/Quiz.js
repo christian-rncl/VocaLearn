@@ -9,7 +9,7 @@ export default class Quiz extends React.Component{
     super(props);
     var quizzes = [
     {
-        questions : ["What is \"Thank You\" in Japanese?", "How do you say \"I am very sorry\" in Japanese?",
+        questions : ["What is \"Thank you very much\" in Japanese?", "How do you say \"I am very sorry\" in Japanese?",
         "How do you say \"What time is it?\" in Japanese?"],
         answers : ["ありがとうございます", "申し訳ございません", "今何時ですか"],
         language : 'ja-JP'
