@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import Home from './Home.js';
 import Header from './Header.js'
@@ -8,7 +7,6 @@ import QuizzesList from './QuizzesList';
 export default class App extends React.Component{
   render(){
     var props = this.props;
-    var collection = props.params.collection;
 
     return(
       <div className='App' style={{height: '100%'}}>

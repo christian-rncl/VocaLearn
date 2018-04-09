@@ -44,6 +44,7 @@ export default class QuizQuestion extends React.Component{
       var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       var SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
       var SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
+
       //const comparisons = require('./test_speech_comparison.js');
       var phrasePara = document.querySelector('#phrase');
       var resultPara = document.querySelector('#result');
@@ -63,15 +64,12 @@ export default class QuizQuestion extends React.Component{
     console.log(phrase.charAt(0));
     console.log("the phrase is \"" + phrase + "\"");
 
-    if(phrase.charAt(0) == 'G' || phrase.charAt(0) == 'M')
+    if(phrase.charAt(0) === 'G' || phrase.charAt(0) === 'M')
     {
-        console.log("I'm in here");
         lang = 'fil-PH';
-    } else  if (phrase.charAt(0) == '집' || phrase.charAt(0) == '숙' || phrase.charAt(0) == '나'){
-        console.log("I'm in here too");
+    } else  if (phrase.charAt(0) === '집' || phrase.charAt(0) === '숙' || phrase.charAt(0) === '나'){
         lang = 'ko-KR';
-    } else  if (phrase.charAt(0) == ' '){
-        console.log("I'm in here too");
+    } else  if (phrase.charAt(0) === ' '){
         lang = 'ar-SA';
     }
 
@@ -175,7 +173,6 @@ export default class QuizQuestion extends React.Component{
     var props = this.props;
     var question = props.question;
     var answer = props.answer;
-    var lang = props.lang;
     var num = props.num;
 
     $('#result').css('background', 'rgba(0,0,0,0.2)');
