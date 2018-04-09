@@ -40,10 +40,8 @@ export default class QuizQuestion extends React.Component{
 
 
   testSpeech(question, answer) {
-
       var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       var SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
-      var SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
 
       //const comparisons = require('./test_speech_comparison.js');
       var phrasePara = document.querySelector('#phrase');
