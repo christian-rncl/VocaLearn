@@ -45,8 +45,7 @@ export default class Quiz extends React.Component{
   }
 
   changeQuestion(newQuestion){
-    this.state.currentQuestion = newQuestion;
-    this.setState(this.state);
+    this.setState((state) => ({ currentQuestion: newQuestion}));
   }
 
   getChangeQF(i){
