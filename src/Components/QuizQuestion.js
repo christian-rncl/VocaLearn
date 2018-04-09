@@ -67,6 +67,9 @@ export default class QuizQuestion extends React.Component{
     {
         console.log("I'm in here");
         lang = 'fil-PH';
+    } else  if (phrase.charAt(0) == '집' || phrase.charAt(0) == '숙' || phrase.charAt(0) == '나'){
+        console.log("I'm in here too");
+        lang = 'ko-KR';
     } else  if (phrase.charAt(0) == ' '){
         console.log("I'm in here too");
         lang = 'ar-SA';
