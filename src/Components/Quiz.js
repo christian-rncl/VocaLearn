@@ -17,13 +17,13 @@ export default class Quiz extends React.Component{
     {
         questions : ["How do you say \"I want to play\"", "How do you say \"You're beautiful\"",
         "How do you say \"Let's sleep\""],
-        answers : [ "Gusto kong maglaro", "maganda ka", "matulog tayo"],
+        answers : [ "Gusto kong maglaro", "Maganda ka", "Matulog tayo"],
         language : 'fil-PH'
     },
 
     {
         questions : ["What is \"He went to the mosque\"?", "How do you say \"I rode in the red car\"?", "This place is crowded"],
-        answers : [" ذهب الى المسجد" , "ركبت في السيارة الحمراء", "المحل مزدحم"],
+        answers : [" ذهب الى المسجد" , " ركبت في السيارة الحمراء", " المحل مزدحم"],
         language : 'ar-SA'
     },
     ];

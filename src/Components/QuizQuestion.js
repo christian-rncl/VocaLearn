@@ -62,7 +62,7 @@ export default class QuizQuestion extends React.Component{
     var lang = 'ja-JP';
     console.log(phrase.charAt(0));
 
-    if(phrase.charAt(0) == 'G')
+    if(phrase.charAt(0) == 'G' || 'M')
     {
         lang = 'fil-PH';
     } else  if (phrase.charAt(0) == ' '){
